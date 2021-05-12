@@ -1,0 +1,27 @@
+{
+  "name": "frontend-career-path-handbook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ALONPC/frontend-career-path-handbook.git"
+  },
+  "author": "ALONPC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ALONPC/frontend-career-path-handbook/issues"
+  },
+  "homepage": "https://github.com/ALONPC/frontend-career-path-handbook#readme"
+}
