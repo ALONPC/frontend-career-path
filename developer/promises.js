@@ -25,6 +25,18 @@ const fetch = require("node-fetch");
 
 // module.exports = { timeoutMessage };
 
+const promisifiedExample = (ok) =>
+  new Promise((resolve, reject) => {
+    if (!ok) {
+      reject(new Error("Rejected"));
+    }
+    resolve("Fulfilled!");
+  });
+
+promisifiedExample().then((res) => {
+  res;
+});
+
 const timeout = () => {
   const wait = new Promise((resolve) => {
     setTimeout(() => {
