@@ -1,29 +1,4 @@
 const fetch = require("node-fetch");
-// const timeoutMessage = (seconds, message, isError) => {
-//   const wait = new Promise((res, rej) => {
-//     try {
-//       if (isError) {
-//         rej(new Error("was told to throw error"));
-//       }
-//       setTimeout(() => {
-//         res(message);
-//       }, seconds);
-//     } catch (error) {
-//       console.error(error);
-//     }
-//   });
-//   return wait.then((result) => {
-//     // result
-//     console.log(
-//       "🚀 ~ file: promises.js ~ line 15 ~ timeoutMessage ~ result",
-//       result
-//     );
-
-//     return result;
-//   });
-// };
-
-// module.exports = { timeoutMessage };
 
 const promisifiedExample = (ok) =>
   new Promise((resolve, reject) => {
@@ -33,7 +8,7 @@ const promisifiedExample = (ok) =>
     resolve("Fulfilled!");
   });
 
-promisifiedExample().then((res) => {
+promisifiedExample(true).then((res) => {
   res;
 });
 
