@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="changeText()">Click here!</button>
+    <p>Change me!</p>
+  </body>
+  <style>
+    html {
+      margin: 24px;
+    }
+  </style>
+</html>
+
+<script>
+  const changeText = () => {
+    const p = document.querySelector("p");
+    p.textContent = "I was changed with an inline event handler!";
+  };
+</script>
