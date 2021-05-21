@@ -1,16 +1,30 @@
 const fetch = require("node-fetch");
 
-const promisifiedExample = (ok) =>
-  new Promise((resolve, reject) => {
-    if (!ok) {
-      reject(new Error("Rejected"));
-    }
-    resolve("Fulfilled!");
-  });
+// const user = { name: "Alonso" };
+// const user = {};
+// const userPromise = (user) =>
+//   new Promise((resolve, reject) => {
+//     if (Object.entries(user).length) {
+//       resolve("User found! Fulfilled");
+//     }
+//     reject(new Error("No user found. Rejected"));
+//   });
+// userPromise(user).then((res) => {
+//   res; // No user found. Rejected
+//   return res;
+// });
 
-promisifiedExample(true).then((res) => {
-  res;
-});
+// const promisifiedExample = (ok) =>
+//   new Promise((resolve, reject) => {
+//     if (!ok) {
+//       reject(new Error("Rejected"));
+//     }
+//     resolve("Fulfilled!");
+//   });
+
+// promisifiedExample(true).then((res) => {
+//   res;
+// });
 
 const timeout = () => {
   const wait = new Promise((resolve) => {
@@ -18,12 +32,10 @@ const timeout = () => {
       resolve("Timeout!");
     }, 1000);
   });
-  return wait
-    .then((result) => {
-      console.log("🚀 ~ result", result);
-      return result;
-    })
-    .then((res) => res);
+  return wait.then((result) => {
+    result; // Timeout!
+    return result;
+  });
 };
 
 const timeoutResult = timeout();
